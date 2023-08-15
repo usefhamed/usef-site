@@ -512,7 +512,7 @@ function Layout() {
               </a>
               <a
                 className="column"
-                href="youssefh.netlify.app" 
+                href="https://youssefh.netlify.app/" 
                 target="_blank"
                 rel="noreferrer"
               >

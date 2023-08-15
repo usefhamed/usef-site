@@ -360,7 +360,7 @@ function Layout() {
               </a>
               <a
                 className="column"
-                href="https://www.youtube.com/"
+                href="https://contacts.ucalgary.ca/info/enel/courses/w23/ENSF338?destination=courses%2Fw23"
                 target="_blank"
                 rel="noreferrer"
               >

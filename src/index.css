@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  background-color: rgb(43, 42, 42);
+  color: white;
+}
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#sidebar {
+  flex: 0 1 20%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  /* border-right: 1px solid #eee; */
+  transition: display 0.7s;
+  justify-content: space-evenly;
+}
+
+.slide-animated {
+  animation: slide-forwards 1s linear forwards;
+}
+
+@keyframes slide-forwards {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.slide-animation-end {
+  transform: translateX(100px);
+}
+
+.slide-animated-back {
+  animation: slide-backwards 1s linear forwards;
+}
+
+@keyframes slide-backwards {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#container {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row; /* change this to column if there's an issue */
+  overflow: hidden;
+}
+
+#menu-button {
+  padding: 0 20px;
+  font-size: 2em;
+}
+
+#menu-button:hover {
+  color: maroon;
+}
+
+#dark-button {
+  padding: 0 20px;
+  font-size: 2em;
+  padding-top: 5px;
+}
+
+#dark-button:hover {
+  color: maroon;
+}
+
+#app-header {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+#sidebar-related {
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+  border-right: 1px solid #eee;
+}
+
+.hidden-sidebar {
+  display: none !important;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+#sidebar-info {
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#myphoto {
+  /* display: flex; */
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+/* #myphoto-container {
+  display: flex;
+} */
+
+#myname {
+  margin: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  padding-top: 0;
+}
+
+.label {
+  margin: 0;
+}
+
+.labelb {
+  margin: 0;
+  filter: grayscale(1);
+}
+
+#contact-info {
+  flex-direction: column;
+  font-size: 14px;
+}
+
+#email-link {
+  text-decoration: none;
+  color: black;
+}
+
+#email-link:hover {
+  text-decoration: underline;
+  color: maroon;
+}
+
+.logos {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+}
+
+.photo-logo:hover {
+  filter: invert(9%) sepia(75%) saturate(5320%) hue-rotate(357deg)
+    brightness(55%) contrast(112%);
+}
+
+#main::-webkit-scrollbar {
+  width: 5px;
+}
+
+#main::-webkit-scrollbar-track {
+  background: white;
+}
+
+#main::-webkit-scrollbar-thumb {
+  background: maroon;
+  border-radius: 10px;
+}
+
+#main {
+  /* padding: 16px; */
+  /* display: flex; */
+  flex: 0 1 100%;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  justify-content: center;
+  overflow: auto;
+}
+
+#title-page {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* background-image: url(https://www.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif); */
+  background-image: url(https://i.pinimg.com/originals/6d/50/ef/6d50efb46f1c5b38714a995c2dc4cddf.gif);
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+}
+
+#introduction {
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+  justify-content: center;
+  margin: 25px;
+}
+
+#my-name-main {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-bottom: 0;
+  font-style: italic;
+  justify-content: center;
+}
+
+.fly-top {
+  animation: move-from-top 0.5s ease-in-out;
+  margin: 0;
+  margin-top: auto;
+}
+
+@keyframes move-from-top {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fly-bottom {
+  animation: move-from-bottom 0.5s ease-in-out;
+  margin: 0;
+  margin-top: auto;
+}
+
+@keyframes move-from-bottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#my-motto {
+  animation: fade-in 2.5s ease-in-out;
+  margin: 10px;
+  text-align: center;
+}
+
+#my-motto-translated {
+  margin: auto;
+  animation: fade-in 2.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.sidebar-tab {
+  padding: 10px;
+  cursor: pointer;
+  font-size: large;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-tab:hover {
+  color: maroon;
+  transform: scale(1.2);
+}
+
+#sidebar-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+#social-media {
+  padding: 10px;
+}
+
+#what-i-am-doing {
+  margin: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  animation: fade-in 2.5s ease-in-out;
+}
+
+#my-description {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+#my-projects {
+  padding-left: 10px;
+}
+
+#me-doing-something {
+  max-width: 400px;
+  max-height: 400px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 10px;
+}
+
+#my-intro {
+  /* margin: auto; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#link-to-ucalgary {
+  color: inherit;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+#link-to-ucalgary:hover {
+  color: maroon;
+}
+
+.skill {
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: large;
+}
+
+.skill-name {
+  padding: 10px;
+  margin: 0;
+}
+
+.skill-description {
+  padding: 10px;
+  margin: 0;
+}
+
+.skill-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-logo {
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.two-logos {
+  /* margin: auto; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+}
+
+.column {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.column:hover {
+  background-color: maroon;
+  color: white;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tag {
+  display: flex;
+}
+
+.language-name {
+  margin: 5px;
+}
+
+.language-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.project-name {
+  text-align: center;
+}
+
+#Skills {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+#skills-intro {
+  padding-left: 10px;
+}
+
+#menu-button-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1100px) {
+  #introduction {
+    flex-direction: column-reverse;
+  }
+
+  #me-doing-something {
+    max-width: 400px;
+    max-height: 400px;
+    justify-content: center;
+    margin: auto;
+    /* margin-left: 10px; */
+  }
+}
+
+#mylogo {
+  max-width: 40px;
+  max-height: 40px;
+  margin: 13px;
+}
+
+#my-trademark {
+  display: flex;
+  justify-content: center;
+}
+
+#top-button-zone {
+  display: flex;
+  flex-direction: column;
+}
+
+#Projects {
+  margin: 25px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #title-page {
+    background-image: url(https://media.tenor.com/t8Y7MiR2wkQAAAAd/dangiuz-cyberpunk.gif);
+  }
+  body {
+    background-color: black;
+    color: white;
+  }
+  #email-link {
+    text-decoration: none;
+    color: white;
+  }
+  .sidebar-tab {
+    color: white;
+  }
+  #dark-button {
+    color: white;
+  }
+  #menu-button {
+    color: white;
+  }
+
+  .skill {
+    background-color: darkgrey;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: large;
+    color: black;
+  }
+  .column {
+    background-color: darkgray;
+  }
+  #main::-webkit-scrollbar-track {
+    background: black;
+  }
+  .logos {
+    /* filter: invert(9%) sepia(75%) saturate(5320%) hue-rotate(357deg)
+      brightness(55%) contrast(112%); */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(251deg)
+      brightness(107%) contrast(105%);
+  }
+  .logos:hover {
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(251deg)
+      brightness(107%) contrast(105%); */
+    filter: invert(9%) sepia(75%) saturate(5320%) hue-rotate(357deg)
+      brightness(55%) contrast(112%);
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 701px) {
+  /* #title-page {
+    background-image: url(https://media.tenor.com/t8Y7MiR2wkQAAAAd/dangiuz-cyberpunk.gif);
+  } */
+
+  #container {
+    flex-direction: column;
+  }
+
+  #sidebar-related {
+    padding: 5px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #eee;
+    border-right: none;
+  }
+
+  #introduction {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #Skills {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #Projects {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #menu-button-zone {
+    flex-direction: row;
+  }
+
+  #myphoto {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  #top-button-zone {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 484px) {
+  #me-doing-something {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 453px) {
+  .project-tags {
+    flex-direction: column;
+  }
+
+  .tag {
+    justify-content: center;
+    padding: 5px;
+  }
+
+  #sidebar {
+    width: 100%;
+  }
+}

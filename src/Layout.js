@@ -319,7 +319,7 @@ function Layout() {
               </div>
             </div>
             <p className="skill-description">
-              My introduction to to adding proper utility to websites and making
+              My introduction to adding proper utility to websites and making
               webapps. I learned both of these languages in university and have
               been using them consistently as to make websites (including this
               one).
@@ -512,7 +512,7 @@ function Layout() {
               </a>
               <a
                 className="column"
-                href="https://youssefh.netlify.app/" 
+                href="https://youssefh.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >

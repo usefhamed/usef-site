@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Outlet, useNavigate, Link } from "react-router-dom";
 import Me from "./myphoto.JPG";
 import insta from "./instagram.png";
-import discord from "./discord.png";
 import github from "./github-mark.png";
 import linkedin from "./linkedin.jpg";
 import TypeWriter from "typewriter-effect";
@@ -124,20 +123,6 @@ function Layout() {
                     className="photo-logo"
                     src={insta}
                     width={20}
-                    height={20}
-                  ></img>
-                </a>
-                <a
-                  className="logos"
-                  href="https://www.discordapp.com/users/usefh"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="My Discord"
-                    className="photo-logo"
-                    src={discord}
-                    width={25}
                     height={20}
                   ></img>
                 </a>
